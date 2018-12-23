@@ -46,6 +46,12 @@ a {
   text-decoration: none;
 }
 
+a:focus,
+a:hover {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
 .project {
   margin: 10px 0;
   border: 1px solid #333;
