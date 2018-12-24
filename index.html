@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -29,8 +29,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
   </head>
   <body>
-    <nav role="navigation">Nav</nav>
-    <header>
+    <div id="mobile">
       <div class="menu-btn">
         <div class="btn-line"></div>
         <div class="btn-line"></div>
@@ -51,13 +50,27 @@
           </li>
         </ul>
       </nav>
-    </header>
+    </div>
+    <div id="nonMobile">
+      <nav class="navbar" role="navigation">
+        <ul class="bar-nav">
+          <li class="bar-item">
+            <a href="#bio" class="nav-link"> About Me </a>
+          </li>
+          <li class="bar-item">
+            <a href="#projects" class="nav-link"> Projects </a>
+          </li>
+          <li class="bar-item">
+            <a href="#contact" class="nav-link"> Contact Me </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
     <main role="main">
       <header role="banner">
-        <h1>
-          My name is John Keller. Being a fullstack developer is not just
-          something I do, it is my passion.
-        </h1>
+        <h1>John Keller</h1>
+        <h2>Full Stack Developer | Leader | Innovator</h2>
       </header>
       <section id="bio">
         <h2>About Me</h2>
@@ -162,6 +175,23 @@
             )
           </p>
         </div>
+      </section>
+      <section id="contact">
+        <p>
+          Haiving worked in coffee shops, I am always down to grab a drink and
+          chat about coding or life in general. You can reach me through the
+          following places.
+        </p>
+        <span
+          ><a
+            href="https://www.linkedin.com/in/john-keller-477b9681/"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i></a
+          ><a href="https://github.com/jmkeller3" target="_blank"
+            ><i class="fab fa-github"></i></a
+          ><a href="mailto: jmkeller3@gmail.com"
+            ><i class="far fa-envelope"></i></a
+        ></span>
       </section>
     </main>
 

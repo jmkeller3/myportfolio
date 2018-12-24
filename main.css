@@ -7,21 +7,19 @@ body {
   line-height: 1.5;
 }
 
-nav,
 footer {
   padding: 1% 0;
-  background-color: #210269;
-  color: #fff;
+  background-color: #fff;
+  color: #333;
 }
-
+/* 
 nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 80px;
   z-index: 2;
-}
+} */
 
 header {
   padding: 12% 0;
@@ -30,7 +28,7 @@ header {
 section {
   min-height: 200px;
   padding: 6% 2%;
-  background: #1b79f3;
+  background: #eaeaea;
 }
 
 section:nth-child(even) {
@@ -77,7 +75,7 @@ a:hover {
   border-radius: 50%;
 }
 
-/* Cool Navbar */
+/* Navbar  */
 .menu-btn {
   position: fixed;
   z-index: 3;
@@ -90,7 +88,7 @@ a:hover {
   width: 28px;
   height: 3px;
   margin: 0 0 5px 0;
-  background: #fff;
+  background: #1b79f3;
   transition: all 0.5s ease-out;
 }
 .menu-btn.close {
@@ -142,7 +140,7 @@ a:hover {
 .menu-nav {
   margin: 0;
   padding: 0;
-  background: #373737;
+  background: #444;
   list-style: none;
   transform: translate3d(0, -100%, 0);
   transition: all 0.5s ease-out;
@@ -163,7 +161,7 @@ a:hover {
   height: 250px;
   background: url("img/John\ orig.jpg");
   border-radius: 50%;
-  border: solid 3px #210269;
+  border: solid 1px #1600d8;
   opacity: 1;
 }
 .menu .nav-item {
@@ -189,7 +187,7 @@ a:hover {
   position: relative;
   font-size: 30px;
   text-transform: uppercase;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   font-weight: 300;
   color: #fff;
   text-decoration: none;
@@ -211,6 +209,99 @@ a:hover {
   transition-delay: 0.3s;
 }
 
-.nav-item:nth-child(4) {
-  transition-delay: 0.4s;
+#nonMobile {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  background-color: #333;
+}
+
+#nonMobile li {
+  display: inline;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+#nonMobile a {
+  color: #fff;
+}
+
+#mobile {
+  display: none;
+}
+
+a i {
+  font-size: 24px;
+  padding: 0 10px;
+  color: #fff;
+}
+
+@media screen and (max-width: 769px) {
+  #mobile {
+    display: inline;
+  }
+
+  .img-container {
+    width: 100%;
+  }
+
+  .img-container img {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  section {
+    width: 100%;
+  }
+
+  header {
+    padding: 5px 10px;
+  }
+
+  main {
+    align-items: center;
+    text-align: center;
+  }
+  main .lg-heading {
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+  }
+  ul.menu-nav.show,
+  div.menu-branding.show {
+    transform: translate3d(0, 0, 0);
+  }
+  .menu-nav {
+    height: 65vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px;
+  }
+  .menu-branding {
+    height: 35vh;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  .menu-branding.show {
+    padding-top: 20px;
+  }
+
+  .menu-branding .portrait {
+    background: url("img/John-small.png");
+    width: 100px;
+  }
+
+  .menu .nav-link {
+    font-size: 24px;
+  }
+
+  #nonMobile {
+    display: none;
+  }
 }
