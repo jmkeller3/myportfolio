@@ -156,14 +156,7 @@ a:hover {
 .menu-branding.show {
   transform: translate3d(0, 0, 0);
 }
-.menu-branding .portrait {
-  width: 250px;
-  height: 250px;
-  background: url("img/john_original.jpg");
-  border-radius: 50%;
-  border: solid 1px #1600d8;
-  opacity: 1;
-}
+
 .menu .nav-item {
   -webkit-transform: translate3d(600px, 0, 0);
   -moz-transform: translate3d(600px, 0, 0);
@@ -293,7 +286,7 @@ a i {
   }
 
   .menu-branding .portrait {
-    background: url("img/john-small.png");
+    background: url("/src/john-small.png");
     width: 100px;
   }
 
