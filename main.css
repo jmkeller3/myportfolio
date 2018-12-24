@@ -286,7 +286,7 @@ a i {
   }
 
   .menu-branding .portrait {
-    background: url("/src/john-small.png");
+    background: url("src/john-small.png");
     width: 100px;
   }
 
