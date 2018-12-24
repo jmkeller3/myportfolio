@@ -62,13 +62,17 @@ a:hover {
   padding: 20px;
 }
 
-.project:nth-child(even) {
+.project a {
+  color: #444;
+}
+
+.project:nth-child(odd) {
   background-color: #333;
   color: #fff;
 }
 
-.project:nth-child(even) a {
-  color: #bdbdbd;
+.project:nth-child(odd) a {
+  color: #eceaea;
 }
 
 .portrait {
