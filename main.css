@@ -159,7 +159,7 @@ a:hover {
 .menu-branding .portrait {
   width: 250px;
   height: 250px;
-  background: url("img/John\ orig.jpg");
+  background: url("img/john_original.jpg");
   border-radius: 50%;
   border: solid 1px #1600d8;
   opacity: 1;
@@ -293,7 +293,7 @@ a i {
   }
 
   .menu-branding .portrait {
-    background: url("img/John-small.png");
+    background: url("img/john-small.png");
     width: 100px;
   }
 
