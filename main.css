@@ -215,7 +215,7 @@ a:hover {
   height: 250px;
   background: url("./src/john_original.jpg");
   border-radius: 50%;
-  border: solid 1px #1600d8;
+  border: solid 1px #1b79f3;
   opacity: 1;
 }
 
@@ -289,12 +289,12 @@ a i {
     transform: translate3d(0, 0, 0);
   }
   .menu-nav {
-    height: 72vh;
+    height: 75vh;
     transform: translate3d(-100%, 0, 0);
     font-size: 24px;
   }
   .menu-branding {
-    height: 28vh;
+    height: 25vh;
     transform: translate3d(100%, 0, 0);
   }
 
@@ -305,6 +305,7 @@ a i {
   .menu-branding .portrait {
     background: url("./src/john_small.png");
     width: 100px;
+    height: 100px;
   }
 
   .menu .nav-link {
