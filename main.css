@@ -15,6 +15,7 @@ footer {
 
 header {
   padding: 12% 0;
+  min-height: 200px;
 }
 
 section {
@@ -69,6 +70,16 @@ a:hover {
 
 .portrait {
   border-radius: 50%;
+}
+
+.view {
+  display: block;
+}
+
+#boardgamenight,
+#dominion,
+#wait2plate {
+  display: none;
 }
 
 #bio p {
@@ -237,6 +248,51 @@ a i {
   font-size: 24px;
   padding: 0 10px;
   color: #fff;
+}
+
+/* Word Animation */
+.word {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  opacity: 0;
+}
+
+.letter {
+  display: inline-block;
+  position: relative;
+  float: none;
+  -webkit-transform: translateZ(25px);
+  transform: translateZ(25px);
+  -webkit-transform-origin: 50% 50% 25px;
+  transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+  -webkit-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transition: -webkit-transform 0.32s
+    cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: -webkit-transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19),
+    -webkit-transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+  -webkit-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+}
+
+.letter.in {
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transition: -webkit-transform 0.38s
+    cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: -webkit-transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    -webkit-transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 @media screen and (max-width: 769px) {
