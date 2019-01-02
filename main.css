@@ -250,6 +250,10 @@ a i {
   color: #fff;
 }
 
+a i:hover {
+  color: #1b79f3;
+}
+
 /* Word Animation */
 .word {
   position: absolute;

@@ -15,18 +15,18 @@ $(window).scroll(function() {
     wpwS = $(this).scrollTop();
 
   if (bgwS > bghT + bghH - bgwH) {
-    console.log(`test`);
-    $("#boardgamenight").fadeIn(1500);
+    console.log(`test 1`);
+    $("#boardgamenight").fadeIn(2500);
   }
 
-  if (dkwS > dkhT + dkhH + bghH - dkwH) {
-    console.log(`test`);
-    $("#dominion").fadeIn(1500);
+  if (dkwS > dkhT + dkhH + 130) {
+    console.log(`test 2`);
+    $("#dominion").fadeIn(2000);
   }
 
-  if (wpwS > wphT + wphH + wpwH) {
-    console.log(`test`);
-    $("#wait2plate").fadeIn(1500);
+  if (wpwS > wphT + wphH + wpwH + 150) {
+    console.log(`test 3`);
+    $("#wait2plate").fadeIn(1000);
   }
 });
 
@@ -53,7 +53,7 @@ function startWords() {
 
     changeWord();
     clearInterval(wordInterval);
-    wordInterval = setInterval(changeWord, 4500);
+    wordInterval = setInterval(changeWord, 4800);
   } catch (err) {
     console.log(err);
   }
