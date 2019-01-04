@@ -1,3 +1,31 @@
+$.fn.extend({
+  animateCss: function(animationName, callback) {
+    var animationEnd = (function(el) {
+      var animations = {
+        animation: "animationend",
+        OAnimation: "oAnimationEnd",
+        MozAnimation: "mozAnimationEnd",
+        WebkitAnimation: "webkitAnimationEnd"
+      };
+
+      for (var t in animations) {
+        if (el.style[t] !== undefined) {
+          return animations[t];
+        }
+      }
+    })(document.createElement("div"));
+
+    this.addClass("animated " + animationName);
+    // .one(animationEnd, function() {
+    //   $(this).removeClass("animated " + animationName);
+
+    //   if (typeof callback === "function") callback();
+    // });
+
+    return this;
+  }
+});
+
 $(window).scroll(function() {
   let bghT = $("#boardgamenight").offset().top,
     bghH = $("#boardgamenight").outerHeight(),
@@ -16,17 +44,27 @@ $(window).scroll(function() {
 
   if (bgwS > bghT + bghH - bgwH) {
     console.log(`test 1`);
-    $("#boardgamenight").fadeIn(2500);
+
+    // $("#boardgamenight").fadeIn(2500);
+    $("#boardgamenight")
+      .show()
+      .animateCss("fadeInLeft");
   }
 
   if (dkwS > dkhT + dkhH + 130) {
     console.log(`test 2`);
-    $("#dominion").fadeIn(2000);
+    // $("#dominion").fadeIn(2000);
+    $("#dominion")
+      .show()
+      .animateCss("fadeInLeft");
   }
 
-  if (wpwS > wphT + wphH + wpwH + 150) {
+  if (wpwS > wphT + wphH + 150) {
     console.log(`test 3`);
-    $("#wait2plate").fadeIn(1000);
+    // $("#wait2plate").fadeIn(1000);
+    $("#wait2plate")
+      .show()
+      .animateCss("fadeIn");
   }
 });
 
@@ -85,7 +123,7 @@ function animateLetterOut(cw, i) {
 function animateLetterIn(nw, i) {
   setTimeout(function() {
     nw[i].className = "letter in";
-  }, 340 + i * 200);
+  }, 1200 + i * 100);
 }
 
 function splitLetters(word) {

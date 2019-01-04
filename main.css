@@ -80,6 +80,9 @@ a:hover {
 #dominion,
 #wait2plate {
   display: none;
+  margin-bottom: 20px;
+  animation-duration: 1s;
+  animation-delay: 1s;
 }
 
 #bio p {
