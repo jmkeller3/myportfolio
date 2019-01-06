@@ -111,6 +111,7 @@ a:hover {
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
+  z-index: 3;
 }
 .menu-btn.close .btn-line:nth-child(1) {
   -webkit-transform: rotate(45deg) translate(5px, 5px);
@@ -139,6 +140,7 @@ a:hover {
 }
 .menu.show {
   visibility: visible;
+  z-index: 2;
 }
 .menu-branding,
 .menu-nav {
@@ -229,8 +231,9 @@ a:hover {
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  opacity: 0.8;
   background-color: #333;
+  z-index: 3;
 }
 
 #nonMobile li {

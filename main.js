@@ -1,6 +1,9 @@
 // Select DOM Items
 const menuBtn = document.querySelector(".menu-btn");
 const menu = document.querySelector(".menu");
+const link1 = document.querySelector("#mLink1");
+const link2 = document.querySelector("#mLink2");
+const link3 = document.querySelector("#mLink3");
 const menuNav = document.querySelector(".menu-nav");
 const menuBranding = document.querySelector(".menu-branding");
 const navItems = document.querySelectorAll(".nav-item");
@@ -9,6 +12,9 @@ const navItems = document.querySelectorAll(".nav-item");
 let showMenu = false;
 
 menuBtn.addEventListener("click", toggleMenu);
+link1.addEventListener("click", toggleMenu);
+link2.addEventListener("click", toggleMenu);
+link3.addEventListener("click", toggleMenu);
 
 function toggleMenu() {
   if (!showMenu) {
